@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckwl4tq82qle3"]
+
+[ext_resource type="Script" uid="uid://cn7dpqc8hono5" path="res://sorterManager.gd" id="1_8pqxa"]
+[ext_resource type="PackedScene" uid="uid://cay7b6auux2yc" path="res://choice_half.tscn" id="1_q1w43"]
+
+[node name="Sorter" type="Control" node_paths=PackedStringArray("leftHalf", "rightHalf")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8pqxa")
+leftHalf = NodePath("ChoiceHalf")
+rightHalf = NodePath("ChoiceHalf2")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.26956668, 0.20190701, 0.21831626, 1)
+
+[node name="ChoiceHalf" parent="." instance=ExtResource("1_q1w43")]
+layout_mode = 0
+
+[node name="ChoiceHalf2" parent="." instance=ExtResource("1_q1w43")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -640.0
+offset_right = 0.0
+grow_horizontal = 0
+isRight = true

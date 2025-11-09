@@ -1,0 +1,57 @@
+[gd_scene load_steps=13 format=3 uid="uid://ckwl4tq82qle3"]
+
+[ext_resource type="Script" uid="uid://cn7dpqc8hono5" path="res://sorterManager.gd" id="1_8pqxa"]
+[ext_resource type="PackedScene" uid="uid://cay7b6auux2yc" path="res://choice_half.tscn" id="1_q1w43"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_42bpo"]
+[ext_resource type="Resource" uid="uid://fx0h5jufnjyw" path="res://Characters/aria.tres" id="3_x687a"]
+[ext_resource type="Resource" uid="uid://c44qxtub4qqs6" path="res://Characters/ayana.tres" id="4_snf62"]
+[ext_resource type="Resource" uid="uid://bi7s3jpv0rudn" path="res://Characters/bluffman.tres" id="5_b6yt7"]
+[ext_resource type="Resource" uid="uid://dspqx3lwx3puq" path="res://Characters/doktor.tres" id="6_lim60"]
+[ext_resource type="Resource" uid="uid://dykg4fknorc3k" path="res://Characters/eiji.tres" id="7_agmyc"]
+[ext_resource type="Resource" uid="uid://d0egomyig27ng" path="res://Characters/fprotag.tres" id="8_dpb1w"]
+[ext_resource type="Resource" uid="uid://buvnck7yvul3x" path="res://Characters/gin.tres" id="9_1bijq"]
+[ext_resource type="Resource" uid="uid://d0028ncpgy3f7" path="res://Characters/himari.tres" id="10_wgypl"]
+[ext_resource type="Resource" uid="uid://bacionf3yla2k" path="res://Characters/protag.tres" id="11_iauof"]
+
+[node name="Sorter" type="Control" node_paths=PackedStringArray("leftHalf", "rightHalf")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8pqxa")
+input = Array[ExtResource("2_42bpo")]([ExtResource("3_x687a"), ExtResource("4_snf62"), ExtResource("5_b6yt7"), ExtResource("6_lim60"), ExtResource("7_agmyc"), ExtResource("8_dpb1w"), ExtResource("9_1bijq"), ExtResource("10_wgypl"), ExtResource("11_iauof")])
+leftHalf = NodePath("ChoiceHalf")
+rightHalf = NodePath("ChoiceHalf2")
+
+[node name="LeftHalf" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_vertical = 2
+color = Color(0.22, 0, 0.040333346, 1)
+
+[node name="RightHalf" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.01099999, 0, 0.11, 1)
+
+[node name="ChoiceHalf" parent="." instance=ExtResource("1_q1w43")]
+layout_mode = 0
+
+[node name="ChoiceHalf2" parent="." instance=ExtResource("1_q1w43")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -640.0
+offset_right = 0.0
+grow_horizontal = 0
+isRight = true

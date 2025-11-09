@@ -1,0 +1,17 @@
+[gd_scene load_steps=12 format=3 uid="uid://dlv83ryobml01"]
+
+[ext_resource type="Script" uid="uid://culn4oraykups" path="res://characterManager.gd" id="1_2etva"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_r6eh8"]
+[ext_resource type="Resource" uid="uid://fx0h5jufnjyw" path="res://Characters/aria.tres" id="3_33djf"]
+[ext_resource type="Resource" uid="uid://c44qxtub4qqs6" path="res://Characters/ayana.tres" id="4_utajn"]
+[ext_resource type="Resource" uid="uid://bi7s3jpv0rudn" path="res://Characters/bluffman.tres" id="5_si7um"]
+[ext_resource type="Resource" uid="uid://dspqx3lwx3puq" path="res://Characters/doktor.tres" id="6_3jubb"]
+[ext_resource type="Resource" uid="uid://dykg4fknorc3k" path="res://Characters/eiji.tres" id="7_fjyjc"]
+[ext_resource type="Resource" uid="uid://d0egomyig27ng" path="res://Characters/fprotag.tres" id="8_pdfqh"]
+[ext_resource type="Resource" uid="uid://buvnck7yvul3x" path="res://Characters/gin.tres" id="9_uk68f"]
+[ext_resource type="Resource" uid="uid://d0028ncpgy3f7" path="res://Characters/himari.tres" id="10_hl7m1"]
+[ext_resource type="Resource" uid="uid://bacionf3yla2k" path="res://Characters/ritsu.tres" id="11_1vv17"]
+
+[node name="CharacterManager" type="Node"]
+script = ExtResource("1_2etva")
+characters = Array[ExtResource("2_r6eh8")]([ExtResource("3_33djf"), ExtResource("4_utajn"), ExtResource("5_si7um"), ExtResource("6_3jubb"), ExtResource("7_fjyjc"), ExtResource("8_pdfqh"), ExtResource("9_uk68f"), ExtResource("10_hl7m1"), ExtResource("11_1vv17")])

@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://q1hsmvg2jw1j"]
+
+[ext_resource type="PackedScene" uid="uid://d2inr28o871py" path="res://ranking_slot.tscn" id="1_hdexh"]
+[ext_resource type="Script" uid="uid://ckoedqahuetic" path="res://rankingManager.gd" id="1_ru0tx"]
+[ext_resource type="Theme" uid="uid://cl5j03tv7wuyf" path="res://DefaultTheme.tres" id="3_6trab"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ru0tx"]
+resource_local_to_scene = true
+bg_color = Color(0, 0, 0, 0.45490196)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6trab"]
+resource_local_to_scene = true
+bg_color = Color(0, 0, 0, 0.45490196)
+
+[node name="Ranking" type="Control" node_paths=PackedStringArray("slotParent")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ru0tx")
+slotNode = ExtResource("1_hdexh")
+slotParent = NodePath("ScrollContainer/VBoxContainer")
+winnerHeight = 250
+winnerColors = Array[Color]([Color(0.7882353, 0.6784314, 0.23529412, 1), Color(0.6901961, 0.6784314, 0.63529414, 1), Color(0.627451, 0.33333334, 0.16078432, 1)])
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.26956668, 0.20190701, 0.21831626, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 20.0
+offset_right = 400.0
+offset_bottom = 700.0
+grow_horizontal = 2
+theme_override_constants/separation = 5
+
+[node name="RankingSlot" parent="VBoxContainer" instance=ExtResource("1_hdexh")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ru0tx")
+
+[node name="RankingSlot2" parent="VBoxContainer" instance=ExtResource("1_hdexh")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6trab")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -405.0
+offset_top = 20.0
+offset_right = 405.0
+offset_bottom = 700.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="HomeButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 16.0
+offset_right = 156.0
+offset_bottom = 80.0
+theme = ExtResource("3_6trab")
+theme_override_font_sizes/font_size = 30
+text = "HOME"

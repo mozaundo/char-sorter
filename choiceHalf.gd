@@ -12,7 +12,7 @@ extends Control
 signal choiceMade(isRight:bool)
 
 func _ready() -> void:
-	button.pressed.connect(onButtonPress)
+	button.button_down.connect(onButtonPress)
 
 func setupCharacter(chara:Character):
 	image.texture = chara.image

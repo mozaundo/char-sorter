@@ -1,18 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckwl4tq82qle3"]
+[gd_scene load_steps=4 format=3 uid="uid://ckwl4tq82qle3"]
 
 [ext_resource type="Script" uid="uid://cn7dpqc8hono5" path="res://sorterManager.gd" id="1_8pqxa"]
 [ext_resource type="PackedScene" uid="uid://cay7b6auux2yc" path="res://choice_half.tscn" id="1_q1w43"]
+[ext_resource type="Script" uid="uid://b5mcxhu57qkum" path="res://arraySorter.gd" id="2_d0rko"]
 
-[node name="Sorter" type="Control" node_paths=PackedStringArray("leftHalf", "rightHalf")]
+[node name="Sorter" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="SorterManager" type="Node" parent="." node_paths=PackedStringArray("leftHalf", "rightHalf")]
 script = ExtResource("1_8pqxa")
-leftHalf = NodePath("ChoiceHalf")
-rightHalf = NodePath("ChoiceHalf2")
+leftHalf = NodePath("../ChoiceHalf")
+rightHalf = NodePath("../ChoiceHalf2")
+
+[node name="ArraySorter" type="Node" parent="SorterManager"]
+script = ExtResource("2_d0rko")
+
+[node name="SorterUndo" type="Node" parent="SorterManager"]
 
 [node name="BG" type="ColorRect" parent="."]
 layout_mode = 1

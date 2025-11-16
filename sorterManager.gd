@@ -5,27 +5,26 @@ var questionCount = 0
 
 var arraySorter : ArraySorter
 
-var chars : Array[Character] 
-var testArr : Array[Character] 
-var results : Array[CharArray] 
+var chars : Array[Character] = []
+var testArr : Array[Character] = []
+var results : Array[CharArray] = []
 
 @export var leftHalf : ChoiceHalf
 @export var rightHalf : ChoiceHalf
 
 signal onAnswer
 
-var lastItem : Character
-var lastGreater : bool
-
-var answerCalls : Array[Callable]
+var answerCalls : Array[Callable] = []
 var sortCall : Callable
 
 var sortActive = false
-var currentChar : Character
-var currentArr : Array[Character]
+var currentChar : Character = Character.new()
+var currentArr : Array[Character] = []
 var lastLimitIndex : int = -1
 var lastRemains : int = 0
 var lastAnswer : bool = true
+
+@onready var sorterUndo = $SorterUndo
 
 func _ready() -> void:
 	leftHalf.choiceMade.connect(choiceMade)
@@ -54,9 +53,12 @@ func nextStep():
 			sortReset()
 			nextStep()
 			return
-		print("sort is active")
+		#print("sort is active")
+		sorterUndo.addUndo()
+		printResults()
 		sortInto(currentChar, currentArr, lastLimitIndex, lastRemains, lastAnswer)
 	else:
+		#sorterUndo.addUndo()
 		arraySorter.nextStep()
 
 func printCharArr(arr:Array[Character]) -> String:
@@ -74,11 +76,11 @@ func printResults():
 
 func sortInto(chara:Character, arr:Array[Character], limitIndex := -1, remains := 0, lastRight := true):
 	#add sortCall.call()
-	print("started sortinto with limitIndex is " + str(limitIndex))
+	#print("started sortinto with limitIndex is " + str(limitIndex))
 	sortActive = true
 	
 	if (arr.size() <= 1):
-		printerr("(USER) Array of invalid size")
+		#printerr("(USER) Array of invalid size")
 		return
 	
 	var item1 = chara
@@ -112,11 +114,21 @@ func sortInto(chara:Character, arr:Array[Character], limitIndex := -1, remains :
 	
 	askQuestion(item1, item2)
 	var callback = func(answer:bool):
-		print("limitIndex callback is " + str(limitIndex))
+		#print("answer is  " + str(answer))
+		print("callback limit is  " + str(limitIndex))
+		#print("identity " + str(arr ==  results[0].arr))
+		print("Array itself is " + printCharArr(arr))
 		if (limitIndex != -1):
 			arr.erase(item1)
+		print("item1 is " + item1.name)
 		
-		var index = arr.find(item2)
+		var index
+		if (lastLimitIndex != -1):
+			index = currentArr.find(item2)
+			#print(printCharArr(currentArr))
+		else:
+			index = arr.find(item2)
+			#print(printCharArr(arr))
 		if (!answer):
 			arr.insert(index + 1, item1)
 		else:
@@ -124,11 +136,11 @@ func sortInto(chara:Character, arr:Array[Character], limitIndex := -1, remains :
 			index += 1
 		
 		if (remains == 2 and answer):
-			print("Picked less of two")
+			#print("Picked less of two")
 			sortReset()
 			return
 		elif (remains == 1):
-			print("Only one remains")
+			#print("Only one remains")
 			sortReset()
 			return
 		
@@ -158,10 +170,10 @@ func sortReset():
 	lastRemains = 0
 	lastAnswer = true
 	sortActive = false
-	print("set sortActive " + str(sortActive))
+	#print("set sortActive " + str(sortActive))
 	
 	if (!sortCall.is_null()):
-		print(sortCall)
+		#print("sortCall")
 		sortCall.call()
 	sortCall = Callable()
 
@@ -179,11 +191,11 @@ func askQuestion(x:Character, y:Character):
 	rightHalf.setupCharacter(y)
 
 func choiceMade(x:bool) -> void:
+	#print("const answer is " + str(x))
 	for callback in answerCalls:
 		callback.call(x)
 	answerCalls.clear()
 	onAnswer.emit()
-	printResults()
 	nextStep()
 
 func sortEnd():

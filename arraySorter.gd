@@ -8,9 +8,11 @@ var phase : SortPhases = SortPhases.CREATE
 
 var clashIndex = -1
 
-var lastItem : Character
-var arr1 : Array[Character]
-var arr2 : Array[Character]
+var lastItem : Character = null
+var arr1 : Array[Character] = []
+var arr2 : Array[Character] = []
+
+@onready var sorterUndo = $"../SorterUndo"
 
 func _ready() -> void:
 	sorter = get_parent()
@@ -19,7 +21,9 @@ func nextStep():
 	print("array step " + str(phase))
 	if (phase == SortPhases.CREATE):
 		if (sorter.chars.size() > 0):
-			print("create arrays " + str(sorter.chars.size()))
+			#print("create arrays " + str(sorter.chars.size()))
+			sorterUndo.addUndo()
+			sorter.printResults()
 			createArrays()
 		else:
 			phase = SortPhases.CLASH
@@ -38,6 +42,8 @@ func nextStep():
 		if (sorter.results.size() == 1):
 			sorter.sortEnd()
 			return
+		#sorterUndo.addUndo()
+		#sorter.printResults()
 		arrayClash()
 	elif (phase == SortPhases.MERGE):
 		if (arr1.size() < 1):
@@ -83,27 +89,34 @@ func arrayMerge():
 		lastItem = item
 		arr1.remove_at(0)
 	
+	print("Merge names " + arr1[0].name + arr2[0].name)
+	
 	if (lastItem != null):
-		print("last item isnt null")
+		#print("last item isnt null")
 		var index = arr2.find(lastItem)
 		var size = arr2.size()
-		print("checking if " + str(index) + " is equal to " + str(size - 1))
+		#print("checking if " + str(index) + " is equal to " + str(size - 1))
 		if (index == size - 1):
 			for chara in arr1:
-				print(chara.name)
+				#print(chara.name)
 				lastItem = null
 				arr2.append(chara)
 				index += 1
 			arr1.clear()
 			phase = SortPhases.CLASH 
+			print("autofilled")
 			nextStep()
 			return
+		sorterUndo.addUndo()
+		sorter.printResults()
 		arr2.insert(index + 1, item)
 		var count = sorter.countUnchecked(arr2, index, true, 1)
 		sorter.sortCall = callback
 		sorter.sortInto(item, arr2, index, count, !true)
 	else:
-		print("last item is null")
+		#print("last item is null")
+		sorterUndo.addUndo()
+		sorter.printResults()
 		sorter.sortCall = callback
 		sorter.sortInto(item, arr2)
 

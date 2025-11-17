@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://fyx85ptgk0uo"]
+
+[ext_resource type="Texture2D" uid="uid://d1ryrbduv7jeg" path="res://Characters/_Images/Caligula/_caligula2Ost.jpg" id="1_hjr3l"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_2nxfq"]
+
+[resource]
+resource_name = "Cosmo Dancer (Remix)"
+script = ExtResource("2_2nxfq")
+name = "xxxx/xx/xx"
+image = ExtResource("1_hjr3l")
+origin = "The Caligula Effect 2"
+category = "Song"
+gender = "Neither"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

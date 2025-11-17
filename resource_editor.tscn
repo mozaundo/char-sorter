@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://chuyxp7aiajco"]
+[gd_scene load_steps=11 format=3 uid="uid://chuyxp7aiajco"]
 
 [ext_resource type="Script" uid="uid://dncayny0f8tyd" path="res://resourceEditor.gd" id="1_d02pw"]
+[ext_resource type="Resource" uid="uid://bmak36ye35vie" path="res://Characters/Caligula/Songs/Caligula 2/Alter Garden.tres" id="2_rgpy8"]
+[ext_resource type="Resource" uid="uid://nx7hrj4jrbcs" path="res://Characters/Caligula/Songs/Caligula 2/Cosmo Dancer (CE2 Remix).tres" id="3_cp01j"]
+[ext_resource type="Resource" uid="uid://cm8m10qfbr8ah" path="res://Characters/Caligula/Songs/Caligula 2/Designed desires.tres" id="4_3mydr"]
+[ext_resource type="Resource" uid="uid://cxncqus2xut02" path="res://Characters/Caligula/Songs/Caligula 2/Eternal Silver.tres" id="5_n4n42"]
+[ext_resource type="Resource" uid="uid://bglt65fr57ggr" path="res://Characters/Caligula/Songs/Caligula 2/Miss Conductor.tres" id="6_sra8g"]
+[ext_resource type="Resource" uid="uid://dsaf7b4o31eh" path="res://Characters/Caligula/Songs/Caligula 2/Q-Ai Senorita.tres" id="7_bmrxd"]
+[ext_resource type="Resource" uid="uid://crnafye1k43ql" path="res://Characters/Caligula/Songs/Caligula 2/Simply Praying.tres" id="8_7rqt6"]
+[ext_resource type="Resource" uid="uid://byn2r4gw4ou61" path="res://Characters/Caligula/Songs/Caligula 2/Singi.tres" id="9_sembi"]
+[ext_resource type="Resource" uid="uid://6sxbvisl6h8p" path="res://Characters/Caligula/Songs/Caligula 2/Swap Out.tres" id="10_7uq8t"]
 
 [node name="ResourceEditor" type="Node"]
 script = ExtResource("1_d02pw")
+resources = Array[Resource]([ExtResource("2_rgpy8"), ExtResource("3_cp01j"), ExtResource("4_3mydr"), ExtResource("5_n4n42"), ExtResource("6_sra8g"), ExtResource("7_bmrxd"), ExtResource("8_7rqt6"), ExtResource("9_sembi"), ExtResource("10_7uq8t")])

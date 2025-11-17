@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bn5s7h3g7s3co"]
+
+[ext_resource type="Texture2D" uid="uid://bxm18p3y877hp" path="res://Characters/_Images/Monark/monarkOst.jpg" id="1_km17a"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_dpccc"]
+
+[resource]
+script = ExtResource("2_dpccc")
+name = "Condolences to this dream"
+image = ExtResource("1_km17a")
+origin = "Monark"
+category = "Song"
+gender = "Neither"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

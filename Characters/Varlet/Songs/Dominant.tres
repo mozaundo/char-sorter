@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://cgc8ys0uhaisp"]
+
+[ext_resource type="Texture2D" uid="uid://b3sgcvx7krkxq" path="res://Characters/_Images/Varlet/varletOst.png" id="1_xiuhr"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_8jjem"]
+
+[resource]
+script = ExtResource("2_8jjem")
+name = "Dominant"
+image = ExtResource("1_xiuhr")
+origin = "Varlet"
+category = "Song"
+gender = "Neither"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

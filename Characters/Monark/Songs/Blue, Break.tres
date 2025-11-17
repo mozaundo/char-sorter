@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bbncges4lbdvx"]
+
+[ext_resource type="Texture2D" uid="uid://bxm18p3y877hp" path="res://Characters/_Images/Monark/monarkOst.jpg" id="1_vqe8r"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_xk1s4"]
+
+[resource]
+script = ExtResource("2_xk1s4")
+name = "Blue, Break"
+image = ExtResource("1_vqe8r")
+origin = "Monark"
+category = "Song"
+gender = "Neither"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

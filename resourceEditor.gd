@@ -5,10 +5,10 @@ extends Node
 func _ready() -> void:
 	for res in resources:
 		var chara : Character = res.duplicate()
-		chara.resource_name = chara.name + " (Thorn Remix)"
-		chara.name = chara.name + " (Thorn Remix)"
+		chara.resource_name = chara.name + " (Remix)"
+		chara.name = chara.name + " (Remix)"
 		var path : String = res.resource_path
-		chara.resource_path = path.insert(path.length() - 5, " (Thorn Remix)")
+		chara.resource_path = path.insert(path.length() - 5, " (Remix)")
 		print(chara.resource_path)
 		chara.origin = "The Caligula Effect"
 		ResourceSaver.save(chara)

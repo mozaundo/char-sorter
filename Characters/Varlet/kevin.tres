@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://cmfh5613xddsp"]
+
+[ext_resource type="Texture2D" uid="uid://bm5h7cq2su4rq" path="res://Characters/_Images/Varlet/Kevin.png" id="1_82o3x"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_a5nw2"]
+
+[resource]
+script = ExtResource("2_a5nw2")
+name = "Kevin"
+image = ExtResource("1_82o3x")
+origin = "Varlet"
+gender = "Male"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://vx67fpy5hhn4"]
+
+[ext_resource type="Texture2D" uid="uid://do5x5601jxfd0" path="res://Characters/_Images/Caligula/Kagura_Suzuna.png" id="1_hh0ow"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_582g7"]
+
+[resource]
+script = ExtResource("2_582g7")
+name = "Kagura Suzuna"
+image = ExtResource("1_hh0ow")
+origin = "The Caligula Effect"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

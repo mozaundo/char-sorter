@@ -37,16 +37,18 @@ offset_right = 150.0
 offset_bottom = 475.0
 grow_horizontal = 2
 texture = ExtResource("1_yk3kr")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Name" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -175.0
+offset_left = -225.0
 offset_top = 490.0
-offset_right = 175.0
-offset_bottom = 603.0
+offset_right = 225.0
+offset_bottom = 661.0
 grow_horizontal = 2
 theme = ExtResource("2_x37rj")
 text = "Marie Mizuguchi"

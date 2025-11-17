@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://blmq1ku50mdqb"]
+
+[ext_resource type="Texture2D" uid="uid://q8srj66av5nr" path="res://Characters/_Images/Caligula/Ryuto.png" id="1_tmgkp"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_8n22e"]
+
+[resource]
+script = ExtResource("2_8n22e")
+name = "Ryuto Tsukishima"
+image = ExtResource("1_tmgkp")
+origin = "The Caligula Effect 2"
+gender = "Male"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

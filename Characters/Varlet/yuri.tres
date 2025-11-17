@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://d100vt6ecaom1"]
+
+[ext_resource type="Texture2D" uid="uid://c8c1mfljxrip6" path="res://Characters/_Images/Varlet/Yuri_Monou.png" id="1_7svvi"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_fshrk"]
+
+[resource]
+script = ExtResource("2_fshrk")
+name = "Yuri Monou"
+image = ExtResource("1_7svvi")
+origin = "Varlet"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

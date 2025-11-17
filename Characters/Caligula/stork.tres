@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://d0odj3u5hbg7b"]
+
+[ext_resource type="Texture2D" uid="uid://b2bx7nfq85vvp" path="res://Characters/_Images/Caligula/Stork.png" id="1_m5fkt"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_ohire"]
+
+[resource]
+script = ExtResource("2_ohire")
+name = "Stork"
+image = ExtResource("1_m5fkt")
+origin = "The Caligula Effect"
+gender = "Male"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

@@ -5,15 +5,32 @@ extends Node
 var originSettings : Dictionary[String, bool]
 var origins : Array[String]
 
+var currentCategory : String = "Character"
+var genderSettings : Dictionary[String, bool]
+
+var tagsSettings : Dictionary[String, bool]
+
 func _ready() -> void:
 	generateOrigins()
+	
+	tagsSettings["Male"] = true
+	tagsSettings["Female"] = true
+	tagsSettings["Neither"] = true
 
 func generateOrigins():
+	origins.clear()
 	for chara in characters:
+		if (chara.category != currentCategory):
+			continue
 		var origin = chara.origin
-		if (origins.find(origin) == -1):
+		if (!origins.has(origin)):
 			origins.append(origin)
-			originSettings[origin] = true
+		if (!originSettings.has(origin)):
+			originSettings[origin] = false
+
+func changeCategory(category:String):
+	currentCategory = category
+	generateOrigins()
 
 func resetSettings():
 	for key in originSettings.keys():
@@ -22,7 +39,11 @@ func resetSettings():
 func getCharPool() -> Array[Character]:
 	var arr : Array[Character]
 	for chara in characters:
+		if (chara.category != currentCategory):
+			continue
 		if (!originSettings[chara.origin]):
+			continue
+		if (!tagsSettings[chara.gender]):
 			continue
 		arr.append(chara)
 	return arr

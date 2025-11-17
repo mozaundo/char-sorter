@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bulxsddlpsuap"]
+
+[ext_resource type="Texture2D" uid="uid://b4dca7cksntd2" path="res://Characters/_Images/Caligula/Tadokoro_Koki.png" id="1_h7h6m"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_7orky"]
+
+[resource]
+script = ExtResource("2_7orky")
+name = "Tadokoro Koki"
+image = ExtResource("1_h7h6m")
+origin = "The Caligula Effect"
+gender = "Male"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

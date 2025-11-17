@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://b2qp8f5l5eyoi"]
+
+[ext_resource type="Texture2D" uid="uid://brx2ogxoy7ijp" path="res://Characters/_Images/Monark/Chiyo_Aikawa.png" id="1_p2p2u"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_tdyjp"]
+
+[resource]
+script = ExtResource("2_tdyjp")
+name = "Chiyo Aikawa"
+image = ExtResource("1_p2p2u")
+origin = "Monark"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

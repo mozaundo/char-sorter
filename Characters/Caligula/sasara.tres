@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dyp0ndj0xi2uq"]
+
+[ext_resource type="Texture2D" uid="uid://c067idqvasqkk" path="res://Characters/_Images/Caligula/Sasara.png" id="1_4171h"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_o3a13"]
+
+[resource]
+script = ExtResource("2_o3a13")
+name = "Sasara Amiki"
+image = ExtResource("1_4171h")
+origin = "The Caligula Effect 2"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

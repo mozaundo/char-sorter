@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://b24mn2vb1bqua"]
+
+[ext_resource type="Texture2D" uid="uid://dnd2rqjwjwnux" path="res://Characters/_Images/Caligula/Kiriko.png" id="1_mw573"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_vyv7f"]
+
+[resource]
+script = ExtResource("2_vyv7f")
+name = "Kiriko Miyasako"
+image = ExtResource("1_mw573")
+origin = "The Caligula Effect 2"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

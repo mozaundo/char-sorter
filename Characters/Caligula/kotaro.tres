@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bolyxmcx481ox"]
+
+[ext_resource type="Texture2D" uid="uid://cfn47g2fpj0p3" path="res://Characters/_Images/Caligula/Tomoe_Kotaro.png" id="1_uptta"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_nuy6y"]
+
+[resource]
+script = ExtResource("2_nuy6y")
+name = "Tomoe Kotaro"
+image = ExtResource("1_uptta")
+origin = "The Caligula Effect"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

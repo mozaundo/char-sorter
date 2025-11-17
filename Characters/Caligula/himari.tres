@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://d0028ncpgy3f7"]
+
+[ext_resource type="Texture2D" uid="uid://c451miwdacevf" path="res://Characters/_Images/Caligula/Himari.png" id="1_3ewa1"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="1_agquw"]
+
+[resource]
+script = ExtResource("1_agquw")
+name = "Minamide Himari"
+image = ExtResource("1_3ewa1")
+origin = "The Caligula Effect"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

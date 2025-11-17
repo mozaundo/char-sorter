@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://w7qbsoskmj5d"]
+
+[ext_resource type="Texture2D" uid="uid://cva4qo06babqv" path="res://Characters/_Images/Monark/Hayate_Tsumabuki.png" id="1_ffmnv"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_m7rac"]
+
+[resource]
+script = ExtResource("2_m7rac")
+name = "Hayato Tsumabuki"
+image = ExtResource("1_ffmnv")
+origin = "Monark"
+gender = "Male"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

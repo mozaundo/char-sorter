@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://wqtfl5klgnn2"]
+
+[ext_resource type="Texture2D" uid="uid://ceylns4rtrsg0" path="res://Characters/_Images/Monark/Ryotaro.png" id="1_3yusv"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_hrcdl"]
+
+[resource]
+script = ExtResource("2_hrcdl")
+name = "Ryotaro Date"
+image = ExtResource("1_3yusv")
+origin = "Monark"
+gender = "Male"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

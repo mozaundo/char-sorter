@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://3r26irjbsbnj"]
+
+[ext_resource type="Texture2D" uid="uid://bbkv64umontb0" path="res://Characters/_Images/Caligula/_caligulaOstCover.jpg" id="1_1364y"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_lqae3"]
+
+[resource]
+script = ExtResource("2_lqae3")
+name = "Suicide Prototype"
+image = ExtResource("1_1364y")
+origin = "The Caligula Effect"
+category = "Song"
+gender = "Neither"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

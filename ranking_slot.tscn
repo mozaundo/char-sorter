@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2inr28o871py"]
 
-[ext_resource type="Texture2D" uid="uid://cs7wsokgbgfnj" path="res://Characters/Images/Ayana.png" id="1_bemhi"]
+[ext_resource type="Texture2D" uid="uid://cs7wsokgbgfnj" path="res://Characters/_Images/Caligula/Ayana.png" id="1_bemhi"]
 [ext_resource type="Theme" uid="uid://t30qced8u17r" path="res://NameLabel.tres" id="2_3s3oa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bemhi"]
@@ -29,6 +29,7 @@ grow_horizontal = 0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_bemhi")
 expand_mode = 1
+stretch_mode = 4
 
 [node name="Name" type="Label" parent="."]
 layout_mode = 0

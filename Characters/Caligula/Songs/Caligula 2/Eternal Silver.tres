@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://cxncqus2xut02"]
+
+[ext_resource type="Texture2D" uid="uid://d1ryrbduv7jeg" path="res://Characters/_Images/Caligula/_caligula2Ost.jpg" id="1_msr5k"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_hgf67"]
+
+[resource]
+resource_name = "Cosmo Dancer (Remix)"
+script = ExtResource("2_hgf67")
+name = "Eternal Silver"
+image = ExtResource("1_msr5k")
+origin = "The Caligula Effect 2"
+category = "Song"
+gender = "Neither"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

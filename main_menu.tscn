@@ -1,14 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgxhrfnyyrrwh"]
+[gd_scene load_steps=7 format=3 uid="uid://cgxhrfnyyrrwh"]
 
 [ext_resource type="Theme" uid="uid://t30qced8u17r" path="res://NameLabel.tres" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://r4idhm3nf4n4" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Script" uid="uid://cnnr4blrp6wkq" path="res://checkboxButton.gd" id="3_glbon"]
 [ext_resource type="PackedScene" uid="uid://cuoch20p62hw6" path="res://checkbox_button.tscn" id="3_jix8l"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fu7sn"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jix8l"]
 
-[node name="MainMenu" type="Control" node_paths=PackedStringArray("originParent")]
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("originParent", "errorLabel", "genderPanel", "charaButton", "songsButton", "allButton", "noneButton", "maleButton", "femaleButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,6 +19,14 @@ grow_vertical = 2
 script = ExtResource("1_fu7sn")
 checkBoxScene = ExtResource("3_jix8l")
 originParent = NodePath("Series/ScrollContainer/VBoxContainer")
+errorLabel = NodePath("ErrorPanel/Label")
+genderPanel = NodePath("Genders")
+charaButton = NodePath("Categories/Characters")
+songsButton = NodePath("Categories/Songs")
+allButton = NodePath("Series/All")
+noneButton = NodePath("Series/None")
+maleButton = NodePath("Genders/Control")
+femaleButton = NodePath("Genders/Control2")
 
 [node name="BG" type="ColorRect" parent="."]
 layout_mode = 1
@@ -29,7 +38,6 @@ grow_vertical = 2
 color = Color(0.26956668, 0.20190701, 0.21831626, 1)
 
 [node name="Genders" type="Panel" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 55.0
 offset_top = 32.0
@@ -42,6 +50,8 @@ offset_left = 11.0
 offset_top = 50.0
 offset_right = 196.0
 offset_bottom = 101.0
+script = ExtResource("3_glbon")
+text = "Male"
 
 [node name="CheckBox" type="CheckBox" parent="Genders/Control"]
 layout_mode = 1
@@ -67,6 +77,8 @@ offset_left = 190.0
 offset_top = 50.0
 offset_right = 375.0
 offset_bottom = 101.0
+script = ExtResource("3_glbon")
+text = "Female"
 
 [node name="CheckBox" type="CheckBox" parent="Genders/Control2"]
 layout_mode = 1
@@ -99,7 +111,18 @@ layout_mode = 0
 offset_left = 56.0
 offset_top = 181.0
 offset_right = 906.0
-offset_bottom = 676.0
+offset_bottom = 623.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Series"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 70.0
+offset_right = 840.0
+offset_bottom = 435.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Series/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
 
 [node name="Label" type="Label" parent="Series"]
 layout_mode = 0
@@ -110,16 +133,23 @@ offset_bottom = 51.0
 theme_override_font_sizes/font_size = 32
 text = "Series:"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Series"]
+[node name="All" type="Button" parent="Series"]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 70.0
-offset_right = 840.0
-offset_bottom = 493.0
+offset_left = 659.0
+offset_top = 5.0
+offset_right = 740.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 24
+text = "ALL"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Series/ScrollContainer"]
-layout_mode = 2
-theme_override_constants/separation = 5
+[node name="None" type="Button" parent="Series"]
+layout_mode = 0
+offset_left = 748.0
+offset_top = 5.0
+offset_right = 829.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 24
+text = "NONE"
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 1
@@ -133,3 +163,54 @@ offset_bottom = 125.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 32
 text = "START"
+
+[node name="Categories" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 637.0
+offset_right = 906.0
+offset_bottom = 699.0
+
+[node name="Label" type="Label" parent="Categories"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 181.0
+offset_bottom = 54.0
+theme = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 32
+text = "Categories:"
+
+[node name="Characters" type="Button" parent="Categories"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 6.0
+offset_right = 437.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 30
+text = "Characters"
+
+[node name="Songs" type="Button" parent="Categories"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 6.0
+offset_right = 682.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 30
+text = "Songs
+"
+
+[node name="ErrorPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 33.0
+offset_right = 994.0
+offset_bottom = 138.0
+
+[node name="Label" type="Label" parent="ErrorPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 394.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 22
+autowrap_mode = 2

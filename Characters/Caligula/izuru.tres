@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://uy6qmxl3c7d1"]
+
+[ext_resource type="Texture2D" uid="uid://b8ejppiy217d0" path="res://Characters/_Images/Caligula/Minezawa_Izuru.png" id="1_teqfm"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_yjf8e"]
+
+[resource]
+script = ExtResource("2_yjf8e")
+name = "Minezawa Izuru"
+image = ExtResource("1_teqfm")
+origin = "The Caligula Effect"
+gender = "Male"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

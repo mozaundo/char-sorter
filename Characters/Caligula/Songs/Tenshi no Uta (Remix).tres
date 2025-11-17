@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://Characters/_Images/Caligula/_caligulaOstCover.jpg" id="1_8fkg6"]
+[ext_resource type="Script" path="res://character.gd" id="2_7ri4m"]
+
+[resource]
+resource_name = "Dokusousei Incident (Remix)"
+script = ExtResource("2_7ri4m")
+name = "Dokusousei Incident (Remix)"
+image = ExtResource("1_8fkg6")
+origin = "The Caligula Effect"
+category = "Song"
+gender = "Neither"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

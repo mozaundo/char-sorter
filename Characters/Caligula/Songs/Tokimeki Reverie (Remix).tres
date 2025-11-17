@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://Characters/_Images/Caligula/_caligulaOstCover.jpg" id="1_p114d"]
+[ext_resource type="Script" path="res://character.gd" id="2_6dew0"]
+
+[resource]
+resource_name = "Tokimeki Reverie (Remix)"
+script = ExtResource("2_6dew0")
+name = "Tokimeki Reverie (Remix)"
+image = ExtResource("1_p114d")
+origin = "The Caligula Effect"
+category = "Song"
+gender = "Neither"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

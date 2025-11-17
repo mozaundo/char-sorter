@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://65eaxikdfap2"]
+
+[ext_resource type="Texture2D" uid="uid://16a7inulac5c" path="res://Characters/_Images/Varlet/Ema_Noma.png" id="1_nlnuo"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_1b5yx"]
+
+[resource]
+script = ExtResource("2_1b5yx")
+name = "Ema Noma"
+image = ExtResource("1_nlnuo")
+origin = "Varlet"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

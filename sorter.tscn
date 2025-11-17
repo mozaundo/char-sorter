@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckwl4tq82qle3"]
+[gd_scene load_steps=8 format=3 uid="uid://ckwl4tq82qle3"]
 
 [ext_resource type="Script" uid="uid://cn7dpqc8hono5" path="res://sorterManager.gd" id="1_8pqxa"]
 [ext_resource type="PackedScene" uid="uid://cay7b6auux2yc" path="res://choice_half.tscn" id="1_q1w43"]
 [ext_resource type="Script" uid="uid://b5mcxhu57qkum" path="res://arraySorter.gd" id="2_d0rko"]
 [ext_resource type="Script" uid="uid://bg78c5ci6d2v5" path="res://sorterUndo.gd" id="3_ppacm"]
+[ext_resource type="Script" uid="uid://c17xakcrfy7fx" path="res://backButton.gd" id="5_3u6sf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ppacm"]
 
@@ -61,3 +62,15 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ppacm")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3u6sf")
 text = "UNDO"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 15.0
+offset_right = 121.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ppacm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3u6sf")
+text = "BACK"
+script = ExtResource("5_3u6sf")

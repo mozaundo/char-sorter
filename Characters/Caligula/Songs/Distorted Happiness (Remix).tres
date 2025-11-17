@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://Characters/_Images/Caligula/_caligulaOstCover.jpg" id="1_kt5m3"]
+[ext_resource type="Script" path="res://character.gd" id="2_plrxm"]
+
+[resource]
+resource_name = "Distorted Happiness (Remix)"
+script = ExtResource("2_plrxm")
+name = "Distorted Happiness (Remix)"
+image = ExtResource("1_kt5m3")
+origin = "The Caligula Effect"
+category = "Song"
+gender = "Neither"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

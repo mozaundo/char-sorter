@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://c54qexp88n24q"]
+
+[ext_resource type="Texture2D" uid="uid://db8o7w7o0rh" path="res://Characters/_Images/ZZZ/_0049_Agent_Alice_Thymefield_Portrait.png" id="1_fjm3i"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_h43s0"]
+
+[resource]
+script = ExtResource("2_h43s0")
+name = "Alice"
+image = ExtResource("1_fjm3i")
+origin = "Zenless Zone Zero"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bhtct851feibq"]
+
+[ext_resource type="Texture2D" uid="uid://bca5go5fp7ep2" path="res://Characters/_Images/ZZZ/_0006_Agent_Zhao_Portrait.png" id="1_u1hc3"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_755eb"]
+
+[resource]
+script = ExtResource("2_755eb")
+name = "Zhao"
+image = ExtResource("1_u1hc3")
+origin = "Zenless Zone Zero"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

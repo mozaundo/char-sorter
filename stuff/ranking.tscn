@@ -1,18 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://q1hsmvg2jw1j"]
+[gd_scene load_steps=7 format=3 uid="uid://q1hsmvg2jw1j"]
 
 [ext_resource type="PackedScene" uid="uid://d2inr28o871py" path="res://stuff/ranking_slot.tscn" id="1_hdexh"]
 [ext_resource type="Script" uid="uid://ckoedqahuetic" path="res://stuff/rankingManager.gd" id="1_ru0tx"]
 [ext_resource type="Theme" uid="uid://cl5j03tv7wuyf" path="res://stuff/DefaultTheme.tres" id="3_6trab"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ru0tx"]
-resource_local_to_scene = true
-bg_color = Color(0, 0, 0, 0.45490196)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7acxp"]
+bg_color = Color(0.7882353, 0.6784314, 0.23529412, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6trab"]
-resource_local_to_scene = true
-bg_color = Color(0, 0, 0, 0.45490196)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxabd"]
+bg_color = Color(0.6901961, 0.6784314, 0.63529414, 1)
 
-[node name="Ranking" type="Control" node_paths=PackedStringArray("slotParent")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vh322"]
+bg_color = Color(0.627451, 0.33333334, 0.16078432, 1)
+
+[node name="Ranking" type="Control" node_paths=PackedStringArray("slotParent", "compactParent")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,6 +25,7 @@ slotNode = ExtResource("1_hdexh")
 slotParent = NodePath("ScrollContainer/VBoxContainer")
 winnerHeight = 250
 winnerColors = Array[Color]([Color(0.7882353, 0.6784314, 0.23529412, 1), Color(0.6901961, 0.6784314, 0.63529414, 1), Color(0.627451, 0.33333334, 0.16078432, 1)])
+compactParent = NodePath("Compact")
 
 [node name="BG" type="ColorRect" parent="."]
 layout_mode = 1
@@ -33,27 +35,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.26956668, 0.20190701, 0.21831626, 1)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -400.0
-offset_top = 20.0
-offset_right = 400.0
-offset_bottom = 700.0
-grow_horizontal = 2
-theme_override_constants/separation = 5
-
-[node name="RankingSlot" parent="VBoxContainer" instance=ExtResource("1_hdexh")]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ru0tx")
-
-[node name="RankingSlot2" parent="VBoxContainer" instance=ExtResource("1_hdexh")]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_6trab")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -65,6 +46,7 @@ offset_top = 20.0
 offset_right = 405.0
 offset_bottom = 700.0
 grow_horizontal = 2
+horizontal_scroll_mode = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
@@ -79,3 +61,964 @@ offset_bottom = 80.0
 theme = ExtResource("3_6trab")
 theme_override_font_sizes/font_size = 30
 text = "HOME"
+
+[node name="ViewButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 590.0
+offset_right = 156.0
+offset_bottom = 682.0
+theme = ExtResource("3_6trab")
+theme_override_font_sizes/font_size = 30
+text = "SWITCH
+VIEW"
+
+[node name="Compact" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_top = 10.0
+offset_right = 340.0
+offset_bottom = 350.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7acxp")
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Rank" type="Label" parent="Compact/Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -110.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="Compact/Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 189.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 28
+vertical_alignment = 2
+autowrap_mode = 2
+text_overrun_behavior = 5
+
+[node name="Panel2" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 350.0
+offset_top = 10.0
+offset_right = 690.0
+offset_bottom = 175.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xxabd")
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel2"]
+layout_mode = 1
+offset_top = -50.0
+offset_right = 255.0
+offset_bottom = 289.0
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel2"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -165.0
+offset_top = -110.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel2"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 189.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 24
+vertical_alignment = 2
+autowrap_mode = 2
+text_overrun_behavior = 5
+
+[node name="Panel3" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 350.0
+offset_top = 185.0
+offset_right = 690.0
+offset_bottom = 350.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh322")
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel3"]
+layout_mode = 0
+offset_top = -50.0
+offset_right = 255.0
+offset_bottom = 289.0
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel3"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -110.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel3"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 189.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 24
+vertical_alignment = 2
+autowrap_mode = 2
+text_overrun_behavior = 5
+
+[node name="Panel4" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 700.0
+offset_top = 10.0
+offset_right = 865.0
+offset_bottom = 175.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel4"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel4"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel5" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 875.0
+offset_top = 10.0
+offset_right = 1040.0
+offset_bottom = 175.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel5"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel5"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel5"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel6" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 700.0
+offset_top = 185.0
+offset_right = 865.0
+offset_bottom = 350.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel6"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel6"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel6"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel7" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 875.0
+offset_top = 185.0
+offset_right = 1040.0
+offset_bottom = 350.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel7"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel7"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel7"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel8" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_top = 360.0
+offset_right = 165.0
+offset_bottom = 525.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel8"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel8"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel8"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel9" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_top = 535.0
+offset_right = 165.0
+offset_bottom = 700.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel9"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel9"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel9"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel10" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 175.0
+offset_top = 360.0
+offset_right = 340.0
+offset_bottom = 525.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel10"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel10"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel10"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel11" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 175.0
+offset_top = 535.0
+offset_right = 340.0
+offset_bottom = 700.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel11"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel11"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel11"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel12" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 350.0
+offset_top = 360.0
+offset_right = 515.0
+offset_bottom = 525.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel12"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel12"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel12"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel13" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 350.0
+offset_top = 535.0
+offset_right = 515.0
+offset_bottom = 700.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel13"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel13"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel13"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel14" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 525.0
+offset_top = 360.0
+offset_right = 690.0
+offset_bottom = 525.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel14"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel14"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel14"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel15" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 525.0
+offset_top = 535.0
+offset_right = 690.0
+offset_bottom = 700.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel15"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel15"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel15"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel16" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 700.0
+offset_top = 360.0
+offset_right = 865.0
+offset_bottom = 525.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel16"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel16"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel16"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel17" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 700.0
+offset_top = 535.0
+offset_right = 865.0
+offset_bottom = 700.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel17"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel17"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel17"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel18" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 875.0
+offset_top = 360.0
+offset_right = 1040.0
+offset_bottom = 525.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel18"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel18"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel18"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5
+
+[node name="Panel19" type="Panel" parent="Compact"]
+clip_contents = true
+layout_mode = 0
+offset_left = 875.0
+offset_top = 535.0
+offset_right = 1040.0
+offset_bottom = 700.0
+
+[node name="TextureRect" type="TextureRect" parent="Compact/Panel19"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.5
+offset_right = 82.5
+offset_bottom = 220.994
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Rank" type="Label" parent="Compact/Panel19"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -61.0
+offset_right = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Name" type="Label" parent="Compact/Panel19"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 80.0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2
+autowrap_mode = 1
+text_overrun_behavior = 5

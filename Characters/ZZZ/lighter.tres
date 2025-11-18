@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://c2k1nitx2ricq"]
+
+[ext_resource type="Texture2D" uid="uid://bfn1yh8ns3pg1" path="res://Characters/_Images/ZZZ/_0028_Agent_Lighter_Portrait.png" id="1_w1jrx"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_g00pm"]
+
+[resource]
+script = ExtResource("2_g00pm")
+name = "Lighter"
+image = ExtResource("1_w1jrx")
+origin = "Zenless Zone Zero"
+gender = "Male"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

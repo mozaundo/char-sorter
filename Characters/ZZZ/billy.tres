@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bdwardntglmf8"]
+
+[ext_resource type="Texture2D" uid="uid://dtgbsodtpl6ky" path="res://Characters/_Images/ZZZ/_0043_Agent_Billy_Kid_Portrait.png" id="1_onxli"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_d2tbb"]
+
+[resource]
+script = ExtResource("2_d2tbb")
+name = "Billy"
+image = ExtResource("1_onxli")
+origin = "Zenless Zone Zero"
+gender = "Male"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

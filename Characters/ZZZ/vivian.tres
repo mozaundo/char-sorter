@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://df41xr6ro6as1"]
+
+[ext_resource type="Texture2D" uid="uid://b4cflvv8sulmr" path="res://Characters/_Images/ZZZ/_0011_Agent_Vivian_Banshee_Portrait.png" id="1_6yka2"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_01vha"]
+
+[resource]
+script = ExtResource("2_01vha")
+name = "Vivian"
+image = ExtResource("1_6yka2")
+origin = "Zenless Zone Zero"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

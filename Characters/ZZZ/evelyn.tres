@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://6y8yqlaslbh4"]
+
+[ext_resource type="Texture2D" uid="uid://cuni22x53iip4" path="res://Characters/_Images/ZZZ/_0038_Agent_Evelyn_Chevalier_Portrait.png" id="1_rmgm2"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_tje1i"]
+
+[resource]
+script = ExtResource("2_tje1i")
+name = "Evelyn"
+image = ExtResource("1_rmgm2")
+origin = "Zenless Zone Zero"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

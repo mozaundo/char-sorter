@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://du603tkc75r67"]
+
+[ext_resource type="Texture2D" uid="uid://bb86r7o5a80ce" path="res://Characters/_Images/ZZZ/_0032_Agent_Jane_Doe_Portrait.png" id="1_skx04"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_oi5h0"]
+
+[resource]
+script = ExtResource("2_oi5h0")
+name = "Jane Doe"
+image = ExtResource("1_skx04")
+origin = "Zenless Zone Zero"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

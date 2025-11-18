@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://cbh5jk2fo3wa4"]
+
+[ext_resource type="Texture2D" uid="uid://dlwelas6ik2u3" path="res://Characters/_Images/ZZZ/_0004_Agent_Dialyn_Portrait.png" id="1_hyg42"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_g8c7d"]
+
+[resource]
+script = ExtResource("2_g8c7d")
+name = "Dialyn"
+image = ExtResource("1_hyg42")
+origin = "Zenless Zone Zero"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

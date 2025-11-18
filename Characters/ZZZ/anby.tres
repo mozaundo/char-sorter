@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://do1ncc30avg8x"]
+
+[ext_resource type="Texture2D" uid="uid://bt6ayrjej8om7" path="res://Characters/_Images/ZZZ/_0048_Agent_Anby_Demara_Portrait.png" id="1_qfxsa"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_gg01q"]
+
+[resource]
+script = ExtResource("2_gg01q")
+name = "Anby"
+image = ExtResource("1_qfxsa")
+origin = "Zenless Zone Zero"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

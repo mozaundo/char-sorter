@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://tg2y3y81gqj7"]
+
+[ext_resource type="Texture2D" uid="uid://dcavvvm3egurs" path="res://Characters/_Images/ZZZ/_0035_Agent_Hugo_Vlad_Portrait.png" id="1_r5t4b"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_lmx8i"]
+
+[resource]
+script = ExtResource("2_lmx8i")
+name = "Hugo"
+image = ExtResource("1_r5t4b")
+origin = "Zenless Zone Zero"
+gender = "Male"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

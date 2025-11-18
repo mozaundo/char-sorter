@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://ojldbndp5sk7"]
+
+[ext_resource type="Texture2D" uid="uid://8okgbysp4afn" path="res://Characters/_Images/ZZZ/_0016_Agent_Soldier_11_Portrait.png" id="1_d6eih"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_qeif4"]
+
+[resource]
+script = ExtResource("2_qeif4")
+name = "Soldier 11"
+image = ExtResource("1_d6eih")
+origin = "Zenless Zone Zero"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

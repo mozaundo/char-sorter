@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://doek48vk4w5uc"]
+
+[ext_resource type="Texture2D" uid="uid://j2r3t8wmjqv0" path="res://Characters/_Images/ZZZ/_0047_Agent_Anton_Ivanov_Portrait.png" id="1_uxwgl"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_7hasf"]
+
+[resource]
+script = ExtResource("2_7hasf")
+name = "Anton"
+image = ExtResource("1_uxwgl")
+origin = "Zenless Zone Zero"
+gender = "Male"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

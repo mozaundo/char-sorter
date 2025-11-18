@@ -14,6 +14,7 @@ offset_left = 240.0
 offset_top = 35.0
 offset_right = 1040.0
 offset_bottom = 185.0
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bemhi")
 
 [node name="Image" type="TextureRect" parent="."]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dl5eppc1lp2i5"]
+
+[ext_resource type="Texture2D" uid="uid://6ldbkyh3v7jg" path="res://Characters/_Images/ZZZ/_0020_Agent_Pulchra_Fellini_Portrait.png" id="1_35b54"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_h5gpw"]
+
+[resource]
+script = ExtResource("2_h5gpw")
+name = "Pulchra"
+image = ExtResource("1_35b54")
+origin = "Zenless Zone Zero"
+gender = "Female"
+metadata/_custom_type_script = "uid://dqm3lbea8ubp7"

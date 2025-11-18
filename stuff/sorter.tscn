@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckwl4tq82qle3"]
+[gd_scene load_steps=9 format=3 uid="uid://ckwl4tq82qle3"]
 
 [ext_resource type="Script" uid="uid://cn7dpqc8hono5" path="res://stuff/sorterManager.gd" id="1_8pqxa"]
 [ext_resource type="PackedScene" uid="uid://cay7b6auux2yc" path="res://stuff/choice_half.tscn" id="1_q1w43"]
@@ -9,6 +9,9 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ppacm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3u6sf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ual5b"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="Sorter" type="Control"]
 layout_mode = 3
@@ -72,5 +75,66 @@ offset_bottom = 79.0
 theme_override_font_sizes/font_size = 24
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ppacm")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3u6sf")
-text = "BACK"
+text = "EXIT"
 script = ExtResource("5_3u6sf")
+
+[node name="ExitPopup" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.59607846)
+
+[node name="Panel" type="Panel" parent="ExitPopup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -175.0
+offset_right = 300.0
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ual5b")
+
+[node name="Label" type="Label" parent="ExitPopup/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.5
+offset_top = -96.5
+offset_right = 192.5
+offset_bottom = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Are you sure you want to
+exit to main menu?"
+horizontal_alignment = 1
+
+[node name="yes" type="Button" parent="ExitPopup/Panel"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 241.0
+offset_right = 242.0
+offset_bottom = 313.0
+theme_override_font_sizes/font_size = 32
+text = "Yes"
+
+[node name="no" type="Button" parent="ExitPopup/Panel"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 241.0
+offset_right = 492.0
+offset_bottom = 313.0
+theme_override_font_sizes/font_size = 32
+text = "No"

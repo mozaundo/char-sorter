@@ -60,7 +60,7 @@ offset_right = 156.0
 offset_bottom = 80.0
 theme = ExtResource("3_6trab")
 theme_override_font_sizes/font_size = 30
-text = "HOME"
+text = "EXIT"
 
 [node name="ViewButton" type="Button" parent="."]
 layout_mode = 0

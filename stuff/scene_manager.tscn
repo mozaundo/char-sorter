@@ -1,0 +1,12 @@
+[gd_scene load_steps=5 format=3 uid="uid://djbflm5nn6g8l"]
+
+[ext_resource type="Script" uid="uid://dgv2dwdl4b51c" path="res://stuff/sceneManager.gd" id="1_jo5df"]
+[ext_resource type="PackedScene" uid="uid://ckwl4tq82qle3" path="res://stuff/sorter.tscn" id="2_q0i0d"]
+[ext_resource type="PackedScene" uid="uid://q1hsmvg2jw1j" path="res://stuff/ranking.tscn" id="3_opu64"]
+[ext_resource type="PackedScene" uid="uid://cgxhrfnyyrrwh" path="res://stuff/main_menu.tscn" id="4_opu64"]
+
+[node name="SceneManager" type="Node"]
+script = ExtResource("1_jo5df")
+sorterNode = ExtResource("2_q0i0d")
+rankingNode = ExtResource("3_opu64")
+menuNode = ExtResource("4_opu64")

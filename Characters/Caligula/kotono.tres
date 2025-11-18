@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://doevmyygm1ofk"]
 
 [ext_resource type="Texture2D" uid="uid://dnfjnhatd5vcx" path="res://Characters/_Images/Caligula/Kashiwaba_Kotono.png" id="1_tag7o"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_s376j"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_s376j"]
 
 [resource]
 script = ExtResource("2_s376j")

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://clmhrf40m8d4p"]
 
 [ext_resource type="Texture2D" uid="uid://d163a1s025nmx" path="res://Characters/_Images/Monark/Akane_Tono.png" id="1_oehry"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_d2s78"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_d2s78"]
 
 [resource]
 script = ExtResource("2_d2s78")

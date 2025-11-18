@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://tv4si8vv8j6r"]
 
 [ext_resource type="Texture2D" uid="uid://bj8tlepelxlmp" path="res://Characters/_Images/Monark/Kakeru_Hasegawa.png" id="1_m1yyv"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_saeci"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_saeci"]
 
 [resource]
 script = ExtResource("2_saeci")

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://c0vgyekiuoqd0"]
 
 [ext_resource type="Texture2D" uid="uid://btnt85lmjupoi" path="res://Characters/_Images/Caligula/Kobato.png" id="1_dufk0"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_ojrjj"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_ojrjj"]
 
 [resource]
 script = ExtResource("2_ojrjj")

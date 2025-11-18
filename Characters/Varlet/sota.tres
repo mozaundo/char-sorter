@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://0ybc2vwgr2pi"]
 
 [ext_resource type="Texture2D" uid="uid://cbf22y7vfjpnm" path="res://Characters/_Images/Varlet/Sota_Kodaki.png" id="1_c7k7d"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_kxg1n"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_kxg1n"]
 
 [resource]
 script = ExtResource("2_kxg1n")

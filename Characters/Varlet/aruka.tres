@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://c8uu18667t3b2"]
 
 [ext_resource type="Texture2D" uid="uid://cldtm1felh5y6" path="res://Characters/_Images/Varlet/Aruka_Arisaka.png" id="1_6ha3c"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_6bakk"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_6bakk"]
 
 [resource]
 script = ExtResource("2_6bakk")

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://cebcn8c6fogip"]
 
 [ext_resource type="Texture2D" uid="uid://ir2eg6qbvef6" path="res://Characters/_Images/Varlet/Emiri_Naisa.png" id="1_4d4hh"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_drg80"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_drg80"]
 
 [resource]
 script = ExtResource("2_drg80")

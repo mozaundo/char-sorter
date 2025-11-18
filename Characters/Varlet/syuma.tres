@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dwk7omv5ici8v"]
 
 [ext_resource type="Texture2D" uid="uid://cdtfwygixwghs" path="res://Characters/_Images/Varlet/Syuma_Sugita.png" id="1_erulw"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_tb3v5"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_tb3v5"]
 
 [resource]
 script = ExtResource("2_tb3v5")

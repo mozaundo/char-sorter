@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://drdo2pnymwa1v"]
 
 [ext_resource type="Texture2D" uid="uid://dlu8u8noyscmo" path="res://Characters/_Images/Caligula/Morita_Naruko.png" id="1_6wsaj"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_63d5n"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_63d5n"]
 
 [resource]
 script = ExtResource("2_63d5n")

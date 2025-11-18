@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://b3kgkon2g0s1"]
 
 [ext_resource type="Texture2D" uid="uid://cnsdci76yo5ld" path="res://Characters/_Images/Caligula/Shinohara_Mifue.png" id="1_eyqfw"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_2fusq"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_2fusq"]
 
 [resource]
 script = ExtResource("2_2fusq")

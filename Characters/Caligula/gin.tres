@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dueltstps3ndx"]
 
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="1_j3rk7"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="1_j3rk7"]
 [ext_resource type="Texture2D" uid="uid://cer14o1sktlhc" path="res://Characters/_Images/Caligula/Gin.png" id="1_plg2l"]
 
 [resource]

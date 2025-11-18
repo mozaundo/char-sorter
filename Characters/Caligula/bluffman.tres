@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://mtx1kmnvr5f"]
 
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="1_75286"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="1_75286"]
 [ext_resource type="Texture2D" uid="uid://bwndq0uxr8ppl" path="res://Characters/_Images/Caligula/Bluffman.png" id="1_k5cbq"]
 
 [resource]

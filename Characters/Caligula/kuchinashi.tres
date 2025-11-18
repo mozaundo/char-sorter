@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://cy228wrpwon7p"]
 
 [ext_resource type="Texture2D" uid="uid://b030utitdmxd0" path="res://Characters/_Images/Caligula/Kuchinashi.png" id="1_5bpfi"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_qdkt0"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_qdkt0"]
 
 [resource]
 script = ExtResource("2_qdkt0")

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://c4q3utvirnvec"]
 
 [ext_resource type="Texture2D" uid="uid://dy4qh64tl3mq1" path="res://Characters/_Images/Caligula/_0001_Devil-Mammo.png" id="1_swa21"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_va6r1"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_va6r1"]
 
 [resource]
 script = ExtResource("2_va6r1")

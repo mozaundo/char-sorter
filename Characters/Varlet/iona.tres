@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://btvr4d0ba1gmh"]
 
 [ext_resource type="Texture2D" uid="uid://bi4igfy15osvo" path="res://Characters/_Images/Varlet/Iona_Murata.png" id="1_bt25e"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_k5k7p"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_k5k7p"]
 
 [resource]
 script = ExtResource("2_k5k7p")

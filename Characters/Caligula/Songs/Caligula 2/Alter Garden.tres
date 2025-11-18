@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bmak36ye35vie"]
 
 [ext_resource type="Texture2D" uid="uid://d1ryrbduv7jeg" path="res://Characters/_Images/Caligula/_caligula2Ost.jpg" id="1_yicdf"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_gv1eg"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_gv1eg"]
 
 [resource]
 resource_name = "Cosmo Dancer (Remix)"

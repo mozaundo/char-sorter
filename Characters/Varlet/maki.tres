@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://cxr5344gep0u2"]
 
 [ext_resource type="Texture2D" uid="uid://drv7fg0nmtoxn" path="res://Characters/_Images/Varlet/Maki_Torii.png" id="1_x66jf"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_awggb"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_awggb"]
 
 [resource]
 script = ExtResource("2_awggb")

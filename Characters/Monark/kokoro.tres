@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://cp0ts3kx5yvn6"]
 
 [ext_resource type="Texture2D" uid="uid://4bf887j4vnlj" path="res://Characters/_Images/Monark/Kokoro.png" id="1_gq4h6"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_72sxo"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_72sxo"]
 
 [resource]
 script = ExtResource("2_72sxo")

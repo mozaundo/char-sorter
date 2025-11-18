@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://umx5n440k6wi"]
 
 [ext_resource type="Texture2D" uid="uid://b0pct2ladrgo5" path="res://Characters/_Images/Varlet/Tomohisa_Heida.png" id="1_tteuc"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_6rs3a"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_6rs3a"]
 
 [resource]
 script = ExtResource("2_6rs3a")

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dqkd1i0a6rogt"]
 
 [ext_resource type="Texture2D" uid="uid://3lmk80h6o35c" path="res://Characters/_Images/Monark/Sora_Jingu.png" id="1_nuawg"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_uilpe"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_uilpe"]
 
 [resource]
 script = ExtResource("2_uilpe")

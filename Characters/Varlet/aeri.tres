@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://l48p4tt26owj"]
 
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="1_a57sa"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="1_a57sa"]
 [ext_resource type="Texture2D" uid="uid://nolb14vhf4yf" path="res://Characters/_Images/Varlet/Aeri_Minabe.png" id="1_v0s4w"]
 
 [resource]

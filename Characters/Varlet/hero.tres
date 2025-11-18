@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bjokee7v3dq0p"]
 
 [ext_resource type="Texture2D" uid="uid://dbqu7u0snc2i3" path="res://Characters/_Images/Varlet/Hero-(Varlet).png" id="1_508ia"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_sevbb"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_sevbb"]
 
 [resource]
 script = ExtResource("2_sevbb")

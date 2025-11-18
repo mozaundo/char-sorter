@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bopqd21wmmt0m"]
 
 [ext_resource type="Texture2D" uid="uid://bxm18p3y877hp" path="res://Characters/_Images/Monark/monarkOst.jpg" id="1_aq1l2"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_oxmdi"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_oxmdi"]
 
 [resource]
 script = ExtResource("2_oxmdi")

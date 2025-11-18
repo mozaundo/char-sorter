@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bcjxrgk0t7etn"]
 
 [ext_resource type="Texture2D" uid="uid://c40my7g7d5bx6" path="res://Characters/_Images/Monark/Yoru_true_form.png" id="1_ail5p"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_2csvm"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_2csvm"]
 
 [resource]
 script = ExtResource("2_2csvm")

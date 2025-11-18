@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dykg4fknorc3k"]
 
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="1_qfeub"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="1_qfeub"]
 [ext_resource type="Texture2D" uid="uid://cbk27t1c6ky0m" path="res://Characters/_Images/Caligula/Eiji.png" id="1_wbafw"]
 
 [resource]

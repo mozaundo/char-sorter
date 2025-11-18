@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://pkwum03thnl2"]
 
 [ext_resource type="Texture2D" uid="uid://bbkv64umontb0" path="res://Characters/_Images/Caligula/_caligulaOstCover.jpg" id="1_ux5b7"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_ugktb"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_ugktb"]
 
 [resource]
 script = ExtResource("2_ugktb")

@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckwl4tq82qle3"]
+
+[ext_resource type="Script" uid="uid://cn7dpqc8hono5" path="res://stuff/sorterManager.gd" id="1_8pqxa"]
+[ext_resource type="PackedScene" uid="uid://cay7b6auux2yc" path="res://stuff/choice_half.tscn" id="1_q1w43"]
+[ext_resource type="Script" uid="uid://b5mcxhu57qkum" path="res://stuff/arraySorter.gd" id="2_d0rko"]
+[ext_resource type="Script" uid="uid://bg78c5ci6d2v5" path="res://stuff/sorterUndo.gd" id="3_ppacm"]
+[ext_resource type="Script" uid="uid://c17xakcrfy7fx" path="res://stuff/backButton.gd" id="5_3u6sf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ppacm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3u6sf"]
+
+[node name="Sorter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SorterManager" type="Node" parent="." node_paths=PackedStringArray("leftHalf", "rightHalf")]
+script = ExtResource("1_8pqxa")
+leftHalf = NodePath("../ChoiceHalf")
+rightHalf = NodePath("../ChoiceHalf2")
+
+[node name="ArraySorter" type="Node" parent="SorterManager"]
+script = ExtResource("2_d0rko")
+
+[node name="SorterUndo" type="Node" parent="SorterManager" node_paths=PackedStringArray("undoButton")]
+script = ExtResource("3_ppacm")
+undoButton = NodePath("../../UndoButton")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.26956668, 0.20190701, 0.21831626, 1)
+
+[node name="ChoiceHalf" parent="." instance=ExtResource("1_q1w43")]
+layout_mode = 0
+
+[node name="ChoiceHalf2" parent="." instance=ExtResource("1_q1w43")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -640.0
+offset_right = 0.0
+grow_horizontal = 0
+isRight = true
+
+[node name="UndoButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 20.0
+offset_right = 743.0
+offset_bottom = 84.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ppacm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3u6sf")
+text = "UNDO"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 15.0
+offset_right = 121.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ppacm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3u6sf")
+text = "BACK"
+script = ExtResource("5_3u6sf")

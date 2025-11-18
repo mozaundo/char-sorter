@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dqtytxvwstb1y"]
 
 [ext_resource type="Texture2D" uid="uid://bnpv5k4ic71la" path="res://Characters/_Images/Varlet/Mitsuru_Onoda.png" id="1_mh8it"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_ps8j5"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_ps8j5"]
 
 [resource]
 script = ExtResource("2_ps8j5")

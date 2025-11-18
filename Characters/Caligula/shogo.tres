@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dy4op7706o6l4"]
 
 [ext_resource type="Texture2D" uid="uid://csicag4gbemwj" path="res://Characters/_Images/Caligula/Satake_Shogo.png" id="1_p0ye6"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_nerkq"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_nerkq"]
 
 [resource]
 script = ExtResource("2_nerkq")

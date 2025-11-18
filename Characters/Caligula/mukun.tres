@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dc8tugfn3l2ji"]
 
 [ext_resource type="Texture2D" uid="uid://ct3612xrtm1e3" path="res://Characters/_Images/Caligula/Muukun.png" id="1_w3jbl"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_vl53d"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_vl53d"]
 
 [resource]
 script = ExtResource("2_vl53d")

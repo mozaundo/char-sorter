@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://d18yj1dmj1phi"]
 
 [ext_resource type="Texture2D" uid="uid://b8depk2pwelkk" path="res://Characters/_Images/Varlet/Fumiya_Shimomura.png" id="1_gnru7"]
-[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://character.gd" id="2_tqmmq"]
+[ext_resource type="Script" uid="uid://dqm3lbea8ubp7" path="res://stuff/character.gd" id="2_tqmmq"]
 
 [resource]
 script = ExtResource("2_tqmmq")
